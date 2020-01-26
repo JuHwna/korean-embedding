@@ -37,6 +37,12 @@
  - 학습 데이터에 한 번도 등장하지 않은 패턴에 대해서는 문맥이 비슷한 다른 문장을 참고해 확률을 부여함
  
 ## 4.2. Word2Vec
+ - 2013년 구글 연구팀이 발표한 기법으로 가장 널리 쓰이고 있는 단어 임베딩 모델 
+ - Word2Vec 기법은 두 개의 논문으로 나누어 발표됨
+   - [Efficient Estimation of Word Representations in Vector Space] -> Skip-Gram과 CBOW라는 모델 제안
+   - [Distributed Representations of Words and Phrase and their Compositionality] -> 두 모델을 근간으로 하되 네거티브 샘플링 등 학습 최적화 기법을 제안한 내용이 핵심 골자
+   
+### 4.2.1. 모델 기본 구조
 
       
    
