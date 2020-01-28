@@ -45,8 +45,25 @@
    - [Distributed Representations of Words and Phrase and their Compositionality] -> 두 모델을 근간으로 하되 네거티브 샘플링 등 학습 최적화 기법을 제안한 내용이 핵심 골자
    
 ### 4.2.1. 모델 기본 구조
+ - [Efficient Estimation of Word Representations in Vector Space]
+![skip-gram cbow 아키텍처](https://user-images.githubusercontent.com/49123169/73280396-cc801c00-4231-11ea-9abc-2997a49afdb9.PNG)
  - CBOW 모델 : 주변에 있는 문맥 단어들을 가지고 타깃 단어 하나를 맞추는 과정에서 학습됨
- 
+   - 그림을 보면 입력, 출력 학습 데이터 쌍이 {문맥 단어 4개, 타깃 단어} 하나
  - Skip-gram 모델 : 타깃 단어를 가지고 주변 문맥 단어가 무엇일지 예측하는 과정에서 학습 됨
-      
+   - 그림을 보면 학습데이터는 {타깃 단어, 타깃 직전 두 번째 단어}, {타깃 단어, 타깃 직전 단어}, {타깃 단어, 타깃 다음 단어}, {타깃 단어, 타타깃 다음 두 번째 단어} 4쌍이 됨
+ - Skip-gram이 같은 말뭉치로도 더 많은 학습 데이터를 확보할 수 있음 -> 임베딩 품질이 CBOW보다 좋은 경향이 있음
+ 
+### 4.2.2. 학습 데이터 구축
+ - [Distributed Representations of Words and Phrase and their Compositionality]
+ - Word2Vec Skip-gram 모델의 학습 데이터를 구축하는 과정
+   - 포지티브 샘플 : 타깃 단어와 그 주변에 실제로 등장한 문맥 단어 쌍
+   - 네거티브 샘플 : 타깃 단어와 그 주변에 등장하지 않은 단어(말뭉치 전체에서 랜덤 추출) 쌍
+   - 윈도우 : 포지티브 샘플을 만들 때 타깃 단어 앞뒤로 고려하는 단어 개수
+ - Skip-gram 모델은 전체 말뭉치를 단어별로 슬라이딩해 가면서 학습 데이터를 만듦
+   - 같은 말뭉치를 두고도 엄청나게 많은 학습 데이터 쌍을 만들어낼 수 있음
+   - 이 방식은 소프트맥스 때문에 계산량이 비교적 큰 편
+   - 위의 논문에서 제안한 Skip-gram 모델은 타깃 단어와 문맥 단어 쌍이 주어졌을 때 해당 쌍이 포지티브 샘플인지 네거티브 샘플인지 이진 분류하는 과정에서 학습됨. 
    
+     이렇게 학습하는 기법을 네거티브 샘플링이라고 함. 
+   
+     기존 방법보다 계산량이 훨씬 적음
