@@ -45,6 +45,8 @@
        - 값이 클수록 특이한 단어라는 뜻
        - 단어의 주제 예측 능력과 직결됨
  
+ ![tf-idf](https://user-images.githubusercontent.com/49123169/75989989-88222300-5f37-11ea-9f95-b2cfeb2a1659.PNG)
+ 
  ### 2.2.3. Deep Averaging Network
   - 백오브워즈 가정의 뉴럴 네트워크 버전
   - 문장의 임베딩은 중복집합에 속한 단어의 임베딩을 평균을 취해 만든다.
