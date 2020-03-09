@@ -34,4 +34,7 @@
      - 주변 이웃 단어 집합, 즉 문맥이 유사한 단어벡터는 벡터 공간에 가깝게 임베딩됨
      - 학습이 종료되면 W를 각 단어의 임베딩으로 씀
      
-   
+   ![image](https://user-images.githubusercontent.com/49123169/76235843-08fe5900-626f-11ea-8679-852f88fe91de.png)
+
+![image](https://user-images.githubusercontent.com/49123169/76235883-17e50b80-626f-11ea-9125-968b3a9325c1.png)
+
