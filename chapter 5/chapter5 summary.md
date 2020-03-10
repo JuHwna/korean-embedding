@@ -96,11 +96,13 @@
    - 디리클레 분포란?
      - k차원의 실수 벡터 중 벡터의 요소가 양수이며 모든 요소를 더한 값이 1인 경우에 확률값이 정의되는 연속확률분포
      - 2이상의 자연수 k와 양의 상수 α<sub>1</sub>,...,α<sub>k</sub>에 대하여 디리클레분포의 확률밀도함수의 정의는
-       - x<sub>1</sub>,...,x<sub>k</sub>가 모두 양의 실수이며 Σ<sup>k</sup><sub>i=1</sub>x<sub>i</sub>=1을 만족할 때,
-       - f(x<sub>1</sub>,...,x<sub>k</sub>;α<sub>1</sub>,...,α<sub>k</sub>)=(1/Β (α)) Π<sup>k</sup><sub>i=1</sub>x<sub>i</sub><sup>α<sub>i</sub>-1 <sup>
-       - 그 외의 경우는 0이다.
+     
+      ![image](https://user-images.githubusercontent.com/49123169/76323223-c5b3f100-6327-11ea-9798-63acc927bee7.png)
+      
      - Β (α)
- 
+     
+      ![image](https://user-images.githubusercontent.com/49123169/76323229-c9477800-6327-11ea-8cd0-90dc3932d5f5.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/49123169/76319767-078e6880-6323-11ea-8e35-c22fb8921fc3.png)
